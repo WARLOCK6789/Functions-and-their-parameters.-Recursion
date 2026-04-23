@@ -1,0 +1,30 @@
+#include <iostream>
+#include <Windows.h>
+
+
+unsigned long long Fibonacci(int n)
+{
+    if (n == 1) return 0;
+    if (n == 2) return 1;
+
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+
+int main()
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    int a;
+    std::cout << "Введите число: ";
+    std::cin >> a;
+
+    std::cout << "Числа Фибоначчи: ";
+    for (int i = 1; i <= a; i++)
+    {
+        std::cout << Fibonacci(i) << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
